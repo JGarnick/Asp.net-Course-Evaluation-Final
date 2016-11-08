@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EvaluationMaster.master.cs" Inherits="courseEval.EvaluationMaster" %>
+
+
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Course Evaluation Website</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+
+    <link href="styles/styles.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="styles/sticky-footer-navbar.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div class="col-xs-12">
+            <input id="logoutBtn" class="btn btn-default logout-btn" runat="server" type="button" value="Logout" />
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">       
+            </asp:ContentPlaceHolder>           
+            
+        </div>
+ </div>
+    <footer>
+      <div class="col-xs-12">
+        <p runat="server" id="footer" class="footer">website made by <a href="www.github.com/jgarnick">Josh Garnick</a></p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
