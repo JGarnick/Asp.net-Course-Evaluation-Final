@@ -3,3 +3,4 @@ C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\bin\course
 C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\bin\courseEval.pdb
 C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\obj\Debug\courseEval.dll
 C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\obj\Debug\courseEval.pdb
+C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\obj\Debug\courseEval.csprojResolveAssemblyReference.cache

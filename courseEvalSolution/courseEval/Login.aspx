@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/EvaluationMaster.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="courseEval.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="login-wrap">
+        <div class="col-xs-12 center">
+            <asp:Label ID="successLabel" cssClass="bright-green center" runat="server" Text="" Visible="false"></asp:Label>
+        </div>
 		<h1 class="page-header">Evaluation Login</h1>
 		<div class="panel trans-panel panel-default">				
 			<div class="panel-body">
@@ -61,6 +64,7 @@
 					<div class="form-group">
 					    <div class="col-sm-12">
                             <div class="row">
+                                
                                 <div class="col-xs-12">
 						            <asp:button runat="server" type="submit" class="btn btn-warning" text="Sign In" ID="submitBtn" OnClick="submitBtn_Click"></asp:button>
                                 </div>
