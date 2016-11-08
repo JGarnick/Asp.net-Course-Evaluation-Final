@@ -11,7 +11,8 @@ namespace courseEval
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (HttpContext.Current.Request.RawUrl == "/Login.aspx")
+                logoutBtn.Visible = false;           
         }
 
         protected void Page_Init(object sender, EventArgs e)

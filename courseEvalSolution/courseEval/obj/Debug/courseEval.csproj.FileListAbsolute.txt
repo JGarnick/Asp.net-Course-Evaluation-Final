@@ -4,3 +4,9 @@ C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\bin\course
 C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\obj\Debug\courseEval.dll
 C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\obj\Debug\courseEval.pdb
 C:\Users\Christina\Desktop\ASPnet\Lab 4\courseEvalSolution\courseEval\obj\Debug\courseEval.csprojResolveAssemblyReference.cache
+C:\Users\Christina\Documents\GitHub\Asp.net-Course-Evaluation-Final\courseEvalSolution\courseEval\bin\courseEval.dll.config
+C:\Users\Christina\Documents\GitHub\Asp.net-Course-Evaluation-Final\courseEvalSolution\courseEval\bin\courseEval.dll
+C:\Users\Christina\Documents\GitHub\Asp.net-Course-Evaluation-Final\courseEvalSolution\courseEval\bin\courseEval.pdb
+C:\Users\Christina\Documents\GitHub\Asp.net-Course-Evaluation-Final\courseEvalSolution\courseEval\obj\Debug\courseEval.csprojResolveAssemblyReference.cache
+C:\Users\Christina\Documents\GitHub\Asp.net-Course-Evaluation-Final\courseEvalSolution\courseEval\obj\Debug\courseEval.dll
+C:\Users\Christina\Documents\GitHub\Asp.net-Course-Evaluation-Final\courseEvalSolution\courseEval\obj\Debug\courseEval.pdb
