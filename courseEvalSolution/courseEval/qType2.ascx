@@ -6,6 +6,8 @@
             <asp:Label ID="qText" runat="server" Text=""></asp:Label>
           </div>
           <textarea id="textResponse" class="question-response" rows="4" runat="server"></textarea>
+          <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="textResponse" runat="server" ErrorMessage="Question cannot be empty">
+              </asp:RequiredFieldValidator>--%>
       </div>
     </div>
 </div>
