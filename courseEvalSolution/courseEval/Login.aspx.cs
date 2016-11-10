@@ -12,9 +12,12 @@ namespace courseEval
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["Student"] = null;
+            successLabel.Text = "";
+            successLabel.Visible = false;
             if (Session["finished"] != null)
             {
                 FinishedAllEvals();
+                Session["finished"] = null;
             }
         }
 

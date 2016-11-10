@@ -23,7 +23,7 @@ namespace courseEval
             else
                 user = (Student)Session["Student"];
             
-            Student student = new Student(user.ID, user.LNumber, user.Password);
+            Student student = new Student(user.ID, user.LNumber, user.Password);           
             
             if(!IsPostBack)
             {
@@ -32,16 +32,16 @@ namespace courseEval
                 questionSelect.DataValueField = "ID";
                 questionSelect.DataBind();
             }
-            if(IsPostBack)
-            {
-                Submit_Logic();
-                if (questionSelect.Items.Count == 0)
-                {
-                    Session["finished"] = true;
-                    Response.Redirect("~/Login.aspx");
-                }
-                    
-            }
+            //if(IsPostBack)
+            //{
+            //    Submit_Logic();
+            //    if (questionSelect.Items.Count == 0)
+            //    {
+            //        Session["finished"] = true;
+            //        Response.Redirect("~/Login.aspx");
+            //    }
+            //        
+            //}
         }
         //protected void Page_Init(object sender, EventArgs e) //Trying to get submit button to accept the submitBtn_Click event unsuccessfully
         //{
@@ -101,12 +101,6 @@ namespace courseEval
         //}
         protected void submitBtn_Click(object sender, EventArgs e)
         {
-            //Just need the page to reload
-            Session["evaluation"] = null;
-            
-        }
-        protected void Submit_Logic()
-        {
             if (Session["evaluation"] != null)
             {
                 StudentEvaluation studentEvaluation = new StudentEvaluation(user, (Evaluation)Session["evaluation"]);
@@ -128,9 +122,42 @@ namespace courseEval
                     successLabel.CssClass = "bright-green col-xs-12 center";
                     testForm.Controls.Add(successLabel);
                     questionSelect.Items.RemoveAt(questionSelect.SelectedIndex);
+                    if (questionSelect.Items.Count == 0) //Had an epiphany to nest it here
+                    {
+                        Session["evaluation"] = null;
+                        Session["finished"] = true;
+                        Response.Redirect("~/Login.aspx");
+                    }
                 }
             }
         }
+        //protected void Submit_Logic() //Created because I needed to remove selected item before page load, and page load happens before submitBtn_Click runs
+        //{
+        //    if (Session["evaluation"] != null)
+        //    {
+        //        StudentEvaluation studentEvaluation = new StudentEvaluation(user, (Evaluation)Session["evaluation"]);
+        //        System.Web.UI.HtmlControls.HtmlForm newForm = (System.Web.UI.HtmlControls.HtmlForm)Session["form"];
+        //
+        //        foreach (qType1 qt1 in newForm.Controls.OfType<qType1>())
+        //        {
+        //            studentEvaluation.AddAnswer(qt1.QuestionID, qt1.Answer);
+        //        }
+        //        foreach (qType2 qt2 in newForm.Controls.OfType<qType2>())
+        //        {
+        //            studentEvaluation.AddAnswer(qt2.QuestionID, qt2.Answer);
+        //        }
+        //        studentEvaluation.Submit();
+        //        if (studentEvaluation.IsComplete)
+        //        {
+        //            Label successLabel = new Label();
+        //            successLabel.Text = "Form was submitted successfully!";
+        //            successLabel.CssClass = "bright-green col-xs-12 center";
+        //            testForm.Controls.Add(successLabel);
+        //            questionSelect.Items.RemoveAt(questionSelect.SelectedIndex);
+        //        }
+        //        Session["evaluation"] = null;
+        //    }
+        //}
         //Setting the question text for Type 1 questions
         private void SetType1Questions(List<Question> type1)
         {
