@@ -71,6 +71,14 @@ namespace courseEval
                 qType1 c1 = (qType1)LoadControl("~/qType1.ascx");                
                 c1.ID = "q1" + i;
                 testForm.Controls.AddAt(testForm.Controls.Count - 2, c1);
+                //RequiredFieldValidator q1req = new RequiredFieldValidator(); //couldn't get this to work. Seemed like it wanted to validate before I had a chance to answer
+                //q1req.ID = "RequiredFieldValidator1" + i;
+                //q1req.ControlToValidate = c1.ID;
+                //q1req.ErrorMessage = "Please select an answer";
+                //q1req.SetFocusOnError = true;
+                //q1req.CssClass = "text-danger";
+                //q1req.Runat = "server";
+                //testForm.Controls.AddAt(testForm.Controls.Count - 2, q1req);
                 
                 if (i == type1.Count -1)
                 {
@@ -79,6 +87,14 @@ namespace courseEval
                         qType2 c2 = (qType2)LoadControl("~/qType2.ascx");
                         c2.ID = "q2" + y;
                         testForm.Controls.AddAt(testForm.Controls.Count - 2, c2);
+                        //RequiredFieldValidator q2req = new RequiredFieldValidator();
+                        //q2req.ID = "RequiredFieldValidator2" + y;
+                        //q2req.ControlToValidate = c2.ID;
+                        //q2req.ErrorMessage = "Please select an answer";
+                        //q2req.SetFocusOnError = true;
+                        //q2req.CssClass = "text-danger";
+                        //q2req.Runat = "server";
+                        //testForm.Controls.AddAt(testForm.Controls.Count - 2, q2req);
                     }
                     //CreateSubmitButton();
                     submitBtn.Visible = true;
